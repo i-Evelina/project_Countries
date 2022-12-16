@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Описание</title>
+</head>
+<body>
+<a href="http://127.0.0.1:8000/countries_list">Список стран</a>
+<center><h1> {{ country.country }} </h1></center>
+<hr>
+<center><h3> Список языков: </h3></center>
+{% for lang in languages %}
+        <div>
+            <center><p> {{ lang }}</p></center>
+        </div>
+{% endfor %}
+
+</body>
+</html>

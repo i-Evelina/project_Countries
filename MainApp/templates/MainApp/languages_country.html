@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список стран</title>
+</head>
+<body>
+<a href="http://127.0.0.1:8000/languages">Список языков</a>
+<center><h1>Список стран:</h1></center>
+    <hr>
+    {% for country in countries %}
+        <div>
+            <p> {{forloop.counter}} {{ country }} </p
+        </div>
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Страны</title>
+</head>
+<body>
+<header>
+<div>
+<nav>
+<div>
+    <center>
+{% for i in alphabet %}
+<a href="/countries_list/alphabet/{{ forloop.counter0 }}">{{ i }}</a>
+{% endfor %}
+    </center>
+</div>
+</nav>
+</div>
+</header>
+    <hr>
+<div>
+	<div>
+		<span><a href="/countries_list/language/"></a></span>
+	</div>
+	<div>
+		<center>
+		{% for i in page_obj %}
+			<a href="/countries_list/{{ i.id }}">{{ i.country }}</a>
+		{% endfor %}
+		</center>
+	</div>
+	<div>
+		<center>
+		<nav>
+			<ul>
+				{% for p in page_obj.paginator.page_range %}
+				<a>
+					<a href="?page={{ p }}">{{ p }}</a>
+				</a>
+				{% endfor %}
+			</ul>
+		</nav>
+		</center>
+	</div>
+</div>
+
+</body>
+</html>

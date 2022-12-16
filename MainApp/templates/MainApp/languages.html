@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Языки</title>
+</head>
+<body>
+
+<h1>Список языков:</h1>
+    <hr>
+    {% for lang in languages %}
+        <div>
+            <a href="/languages/{{ lang.id }}"><p> {{forloop.counter}} {{ lang }}</p></a>
+        </div>
+    {% endfor %}
+</body>
+</html>
